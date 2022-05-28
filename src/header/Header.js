@@ -12,7 +12,6 @@ function Header() {
   function buscar(e) {
     e.preventDefault()
     navigate('/busca?query='+search )
-     
   }
  
 
