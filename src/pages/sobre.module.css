@@ -1,0 +1,22 @@
+.sobre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.sobre h1{
+    
+    color: var(--destakColor);
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+.sobre p {
+    color:rgba(255, 255, 255, 0.542);
+    padding-left: 100px;
+    border-left: 2px solid rgba(255, 255, 255, 0.364);
+    text-align: left;
+    font-size:1.2rem;
+}

@@ -1,0 +1,15 @@
+.contentLancamentos{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 2rem;
+    column-gap: 2rem;
+    align-content: center;
+    max-width: 80%;
+    margin-top: 50px;
+}
+.aviso{
+    font-size: 2rem;
+    margin-top: 100px;
+    opacity:.7;
+}

@@ -1,0 +1,79 @@
+
+
+.botaoContainer{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.containerInfo{
+    
+    position: relative;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    gap:4rem;
+    align-items: center;  */
+    
+}
+.containerInfo .bg{
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .2;
+    z-index:-1;
+    box-shadow: inset 300px -100px 80px 80px rgb(0, 0, 0);
+}
+ 
+.poster{
+    border-radius:15px; 
+    margin-left:5rem;
+
+}
+
+.btnBack{
+    font-size:1.6rem;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    border: 2px solid #fff;
+    padding:5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+.dados{
+    text-align: left;
+    border-left: 2px solid rgba(255, 255, 255, 0.306);
+    padding-left: 70px;
+    margin-left: 4rem;
+}
+.dados p{
+    width: 70%;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.636);
+}
+.dados h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.score{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 20px;
+}
+.star{
+color: yellow;
+}
+.genero{
+    font-weight: bold;
+    margin-bottom: 20px;
+}

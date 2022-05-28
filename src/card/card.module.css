@@ -1,0 +1,97 @@
+.cardSeries{
+    background-color: var(--bgColor);
+    position: relative;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius:10px;
+    margin: 15px;
+}
+.iconFav{
+    position:absolute;
+    left:25px;
+    top:32px;
+    font-size:1.6rem;
+    z-index: 99;
+}
+.fotoCard{
+    border-radius:10px 10px 0 0 ;
+    transform:scale(.9) ;
+    transition: all 0.3s;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.258);
+   
+}
+.fotoCard:hover{
+    transform:scale(1.05) ;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.529);
+
+}
+.cardDetails{
+    text-align:left;
+    padding: 15px;  
+}
+.contStar{
+    display:flex;
+    align-items:center;
+    
+}
+.iconStar{
+    color: yellow ;
+    font-size:1.3rem;
+    
+}
+.nota{
+    font-size: 1.3rem;
+    margin-left: 8px;
+}
+.mais{
+    font-size: 1.5rem;
+    
+}
+.contMais{
+    display: flex;
+}
+.textoMais{
+    font-size: 1.4rem;
+    margin-left: 8px;
+}
+.cardDetails h2{
+    font-size:.8rem;
+    color: rgba(255, 255, 255, 0.726);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.cardDetails h1{
+    height:70px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+.btnDetails{
+    background: #6bd5e8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #6bd5e8 0%, #105763 100%); 
+    background: -webkit-linear-gradient(top,  #6bd5e8 0%,#105763 100%); 
+    background: linear-gradient(to bottom,  #6bd5e8 0%,#105763 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bd5e8', endColorstr='#105763',GradientType=0 );
+    padding:10px; 
+    color: var(--bgColor);
+    border-radius: 15px;
+    display: flex;
+    margin:8px 0 8px 0 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transform:scale(.9) ;
+    transition: all 0.3s;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.258);
+    
+}
+.btnDetails:hover{
+    transform:scale(1.05) ;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.529);
+
+}
+
+
+
