@@ -6,12 +6,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
-import Nav from "./nav/Nav";
 import Busca from "./pages/Busca";
 import Lancamentos from "./pages/Lancamentos";
 import Sobre from "./pages/Sobre";
-import Populares from "./pages/Populares";
 import Infos from "./pages/Infos";
+import InfoSeries from "./pages/InfoSeries";
+import Series from "./pages/Series";
 
 function App() {
   return (
@@ -22,10 +22,11 @@ function App() {
           <Routes>
             <Route path="/" end element={< Lancamentos/>}/>
             <Route path="lancamentos" element={< Lancamentos/>}/>
-            <Route path="populares" element={< Populares/>}/>
+            <Route path="series" element={< Series/>}/>
             <Route path="sobre" element={<Sobre/>}/>
             <Route path="busca" element={<Busca/>}/>
             <Route path="infos/:id" element={<Infos/>}/>
+            <Route path="infoseries/:id" element={<InfoSeries/>}/>
           </Routes>
         </div>
         <Footer/>

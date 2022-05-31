@@ -14,8 +14,11 @@ body {
   flex-direction: column;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  --bgColor: #05252b;
-  --destakColor: #6bd5e8;
+  --red:  #ff2525;
+  --purple: rgb(155, 32, 255);
+  --blue: #1500fc;
+  
+  
   min-height: calc(100vh + 10rem);
 }
 
@@ -32,26 +35,25 @@ body {
   position: absolute;
   margin-bottom: 20px;
   left: 0;
-  top: 0;
+  top: 15px;
 }
 .navLink {
   text-decoration: none;
-  color: var(--destakColor);
+  color: var(--purple);
   margin: 15px;
   font-size: 1.8rem;
-  font-weight: bold;
-  opacity: 0.7;
+  opacity: 0.3;
 }
 .active {
-  background-color: var(--bgColor);
+  border-bottom: 2px solid var(--purple);
   padding: 10px;
-  border-radius: 10px;
+  
   opacity: 1;
 }
 .content {
   flex: 1;
   position: relative;
-
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +66,7 @@ body {
 }
 
 .animeLeft {
-  transform: translateY(-20px);
+  transform: translateX(-50px);
   opacity: 0;
   animation: animeLeft 0.5s forwards;
 }

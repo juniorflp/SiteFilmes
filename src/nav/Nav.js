@@ -8,8 +8,8 @@ function Nav() {
         <NavLink to="/" end className="navLink">
           Lançamentos
         </NavLink>
-        <NavLink to="/populares" end className="navLink">
-          Populares
+        <NavLink to="/series" end className="navLink">
+          Series
         </NavLink>
         <NavLink to="/busca" className="navLink">
           Busca

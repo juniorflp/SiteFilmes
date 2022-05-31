@@ -1,9 +1,13 @@
 .sobre{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+    align-items: center; */
+    
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    max-width: 800px;
+    width: 800px;
     margin: 0 auto;
     margin-bottom: 50px;
 }
@@ -13,10 +17,18 @@
     font-size:2.5rem;
     margin-bottom:20px;
 }
+.barra{
+    width:2px;
+    height:400px;
+    background:linear-gradient(to bottom, rgb(155, 32, 255),#ff2525, #1500fc);
+}
+.contP{
+    max-width: 400px;
+}
 .sobre p {
     color:rgba(255, 255, 255, 0.542);
-    padding-left: 100px;
-    border-left: 2px solid rgba(255, 255, 255, 0.364);
+   
+    
     text-align: left;
     font-size:1.2rem;
 }

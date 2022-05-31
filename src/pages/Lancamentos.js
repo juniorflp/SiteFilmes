@@ -15,7 +15,7 @@ function Lancamentos() {
   async function load() {
     try {
       const resposta = await axios.get(
-        `https://api.themoviedb.org/3/discover/movie?primary_release_year=2022&api_key=8379d811565746e8306cca85bd4887c2&language=pt-BR`
+        `https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2022-03-15&primary_release_date.lte=2022-05-22&api_key=8379d811565746e8306cca85bd4887c2&language=pt-BR`
       );
       setSeries(resposta.data.results);
       console.log(resposta.data.results);

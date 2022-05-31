@@ -1,10 +1,19 @@
 .header{
-    background-color:#05252b;
+   position: relative;
+   background-color: black;
     height:10vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+}
+.header:before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:linear-gradient(to right, rgb(155, 32, 255),#ff2525, #1500fc);
+    z-index: -1;
+    margin-bottom: -2px;
+
 }
 .headerItens{
     
@@ -13,37 +22,41 @@
     justify-content:space-between;
     align-items: center;
 }
+.headerItens img{
+    width: 300px;
+    margin-left: -100px;
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50PX;
+    background:linear-gradient(to right, rgb(155, 32, 255),#ff2525, #1500fc);
+    width: 467px;
+    height:45px;
+}
 .searchBar{
-    width:400px;
-    height:50px;
-    color:#05252b;
+    position: relative;
+    background-color: black;
+    width:350px;
+    height:40px;
     font-size: 1.5rem;
     border-radius: 50px 0 0 50px;
     padding:0px 10px;
     border: none;
+    color: white;
+    outline: none;
+    
 }
-.title{
-        
-    background: #6bd5e8; /* Old browsers */
-    background: -moz-linear-gradient(top,  #6bd5e8 0%, #105763 100%); 
-    background: -webkit-linear-gradient(top,  #6bd5e8 0%,#105763 100%); 
-    background: linear-gradient(to bottom,  #6bd5e8 0%,#105763 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bd5e8', endColorstr='#105763',GradientType=0 ); 
-    padding:7px 10px;
-    border-radius: 50px;
-    color:#05252b;
-    font-size: 2rem;
-}
+
+
 .btnSubmit{
-    background: #6bd5e8; /* Old browsers */
-    background: -moz-linear-gradient(top,  #6bd5e8 0%, #105763 100%); 
-    background: -webkit-linear-gradient(top,  #6bd5e8 0%,#105763 100%); 
-    background: linear-gradient(to bottom,  #6bd5e8 0%,#105763 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bd5e8', endColorstr='#105763',GradientType=0 ); 
+    background-color: black;
     border: none;
     color: var(--bgColor);
     font-size: 1.5rem;
-    height:50px;
+    height:40px;
     padding:0px 10px;
     border-radius: 0 50px 50px 0;
     cursor: pointer;

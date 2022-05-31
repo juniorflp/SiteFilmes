@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Card({serie}) {
 
-  const data = new Date(serie.release_date)
+  const data = new Date(serie.first_air_date)
   const newData = data.toLocaleDateString()
   const nota = serie.vote_average.toFixed(1)
 
@@ -30,11 +30,11 @@ function Card({serie}) {
           <span className={styles.nota}>{nota}</span>
         </div>
 
-        <h1>{serie.title}</h1>
+        <h1>{serie.name}</h1>
 
         <h2>{newData}</h2>
 
-        <Link to={`/infos/${serie.id}`} key={serie.id} className={`${styles.btnDetails} animeLeft`}>
+        <Link to={`/infoseries/${serie.id}`} key={serie.id} className={`${styles.btnDetails} animeLeft`}>
           <div className={styles.contMais}>
             <AiOutlinePlusCircle className={styles.mais} /> 
             <span className={styles.textoMais}>Mais detalhes</span>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./header.module.css";
+import logo from "../images/logo.png"
 
 
 function Header() {
@@ -18,9 +19,9 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerItens}>
-        <Link to="/" end><h1 className={styles.title}>Filmes Top</h1></Link>
+        <Link to="/" end><img src={logo}alt="logo"/></Link>
         
-        <form onSubmit={buscar}>
+        <form className={styles.form} onSubmit={buscar}>
           <input
             type="text"
             name="query"

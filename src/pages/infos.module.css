@@ -37,14 +37,23 @@
     margin-left:5rem;
 
 }
-
+.botaoContainer{
+    width:113px;
+    height: 43px;
+    border-radius:15px ;
+    background:linear-gradient(to left, rgb(155, 32, 255),#ff2525, #1500fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .btnBack{
     font-size:1.6rem;
-    background: transparent;
+    background: black;
     color: #fff;
     display: flex;
-    border: 2px solid #fff;
+    border: none;
     padding:5px 10px;
+    
     border-radius: 15px;
     cursor: pointer;
     

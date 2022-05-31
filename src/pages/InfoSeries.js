@@ -5,7 +5,7 @@ import { BiArrowBack } from "react-icons/bi";
 import { useNavigate, useParams } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 
-function Infos() {
+function InfoSeries() {
   const [filme, setFilme] = React.useState([]);
   const [generos, setGeneros] = React.useState([]);
   const foto = filme.backdrop_path;
@@ -29,7 +29,9 @@ function Infos() {
   async function load() {
     try {
       const resposta = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=8379d811565746e8306cca85bd4887c2&language=pt-BR`
+        // ` https://api.themoviedb.org/3/tv/${id}?api_key=8379d811565746e8306cca85bd4887c2&language=pt-BR`
+        `https://api.themoviedb.org/3/tv/${id}?with_networks=213&api_key=8379d811565746e8306cca85bd4887c2&language=pt-BR`
+        // `https://api.themoviedb.org/3/movie/${id}?api_key=8379d811565746e8306cca85bd4887c2&language=pt-BR`
 
       );
       setFilme(resposta.data);
@@ -58,7 +60,7 @@ function Infos() {
       />
 
       <div className={styles.dados}>
-        <h1>{filme.title}</h1>
+        <h1>{filme.name}</h1>
         <div className={styles.score}>
           <AiFillStar className={styles.star} />
           {nota}
@@ -72,4 +74,4 @@ function Infos() {
   );
 }
 
-export default Infos;
+export default InfoSeries;
