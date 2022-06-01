@@ -1,0 +1,33 @@
+.containerNav {
+  position: absolute;
+  margin-bottom: 20px;
+  left: 0;
+  top: 15px;
+}
+.navLink {
+  text-decoration: none;
+  color: var(--purple);
+  margin: 15px;
+  font-size: 1.8rem;
+  opacity: 0.3;
+}
+.active {
+  border-bottom: 2px solid var(--purple);
+  padding: 10px;
+  opacity: 1;
+}
+.hamburger{
+  display: none;
+}
+
+@media (max-width: 999px) {
+  .hamburger {
+    display: flex;
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    right: 5%;
+    top: -140px;
+    cursor: pointer;
+  }
+}

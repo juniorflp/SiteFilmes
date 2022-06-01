@@ -13,3 +13,16 @@
     margin-top: 100px;
     opacity:.7;
 }
+@media (max-width: 790px){
+    .contentLancamentos{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        row-gap:0;
+        column-gap:0;
+        max-width: 100%;
+        
+    }
+
+}
+    
+

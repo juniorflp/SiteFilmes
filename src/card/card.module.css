@@ -76,6 +76,7 @@
     height:70px;
     margin-bottom: 10px;
     margin-top: 10px;
+    overflow:hidden;
     
 }
 .btnDetails{
@@ -99,6 +100,49 @@
     box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.529);
 
 }
+
+@media (max-width: 790px){
+    .cardSeries{
+       max-width: 200px;
+       margin: 2px;
+    }
+    .cardSeries::before{
+        margin: 1px;
+    }
+    .textoMais{
+        font-size: 1.1rem;
+        margin-left: 8px;
+    }
+    .mais{
+        font-size: 1.2rem;
+        
+    }
+    .cardDetails h1{
+        height:70px;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        overflow:hidden;
+    }
+    .iconStar{
+        color: yellow ;
+        font-size:1rem;
+    }
+    .nota{
+        font-size: 1rem;
+        margin-left: 8px;
+    }
+    
+
+}
+@media (max-width: 420px){
+
+    .cardSeries{
+        max-width: 150px;
+        margin: 2px;
+     }
+}
+
 
 
 

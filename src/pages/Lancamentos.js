@@ -2,7 +2,8 @@ import React from "react";
 import axios from "axios";
 import Card from "../card/Card";
 import styles from "./lancamentos.module.css";
-import Nav from "../nav/Nav";
+import WebNav from "../nav/WebNav";
+import MobileNav from "../nav/MobileNav";
 
 
 function Lancamentos() {
@@ -26,7 +27,11 @@ function Lancamentos() {
 
   return (
     <>
-    <Nav/>
+    
+    <WebNav/>
+    <MobileNav/>
+    
+    
       <div className={styles.contentLancamentos}>
         {series.map((serie) => (
           <Card key={serie.id} serie={serie} />

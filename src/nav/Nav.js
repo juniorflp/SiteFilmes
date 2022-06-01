@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+
 function Nav() {
   return (
     <div >
-      <nav className="containerNav">
+      <nav className="containerNav ">
         <NavLink to="/" end className="navLink">
           Lançamentos
         </NavLink>

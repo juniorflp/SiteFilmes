@@ -3,7 +3,8 @@ import axios from "axios";
 import Card from "../card/Card";
 import styles from "./lancamentos.module.css";
 import { useLocation } from "react-router-dom";
-import Nav from "../nav/Nav";
+import WebNav from "../nav/WebNav";
+import MobileNav from "../nav/MobileNav";
 
 function Busca() {
   const [series, setSeries] = React.useState([]);
@@ -26,10 +27,11 @@ function Busca() {
     }
   }
 
-
   return (
     <>
-      <Nav/>
+      <WebNav />
+      <MobileNav />
+
       {series.length === 0 ? (
         <h3 className={`${styles.aviso} animeLeft`}>Digite um título...</h3>
       ) : (
