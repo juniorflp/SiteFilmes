@@ -32,3 +32,39 @@
     text-align: left;
     font-size:1.2rem;
 }
+
+@media (max-width:865px) {
+    .sobre{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+    }
+    .barra{
+        width:400px;
+        height:2px;
+        background:linear-gradient(to right, rgb(155, 32, 255),#ff2525, #1500fc);
+
+    }
+}
+@media (max-width:500px) {
+    .sobre{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        height: 500px;
+        
+    }
+    .barra{
+        width:280px;
+        height:2px;
+        background:linear-gradient(to right, rgb(155, 32, 255),#ff2525, #1500fc);
+
+    }
+    .sobre p{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
