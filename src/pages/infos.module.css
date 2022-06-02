@@ -6,15 +6,14 @@
     left: 10px;
 }
 .containerInfo{
-    
     position: relative;
     height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+    overflow: hidden;
 }
+
 .containerInfo .bg{
     background-size: cover;
     position: absolute;
@@ -26,6 +25,8 @@
     z-index:-1;
     box-shadow: inset 300px -100px 80px 80px rgb(0, 0, 0);
     animation: zoom 20s;
+    
+    
 }
 @keyframes zoom{
     0% {
@@ -38,6 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 @keyframes slide{
@@ -129,21 +131,24 @@ color: yellow;
         padding-left: 0px;
         margin-left: 0rem;
         border-left:none;
-        overflow: hidden;
+        
+    }
+    .containerInfo{
+        height: 120vh;
     }
     .fotoDados{
-        margin-top: 200px;
+        margin-top: 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 100px;
+        
     }
     .paragrafo {
         display: flex;
         justify-content: center;
-        height: 250px;
-        overflow-y:scroll;
-        
+        height: 300px;
        
     }
     .paragrafo p{
@@ -155,8 +160,16 @@ color: yellow;
     }
 }
 @media (max-width: 500px){
+    .containerInfo{
+        height: 130vh;
+    }
     .fotoDados{
-        margin-top: 300px;
+        margin-top: 90px;
+        
+    }
+    .paragrafo p{
+        font-size: 1.1rem;
+        overflow-y: scroll;
     }
     
     
