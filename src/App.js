@@ -12,6 +12,7 @@ import Sobre from "./pages/Sobre";
 import Infos from "./pages/Infos";
 import InfoSeries from "./pages/InfoSeries";
 import Series from "./pages/Series";
+import BackToTop from "./backToTop/BackToTop";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <div className="content">
+          <BackToTop/>
           <Routes>
             <Route path="/" end element={< Lancamentos/>}/>
             <Route path="lancamentos" element={< Lancamentos/>}/>

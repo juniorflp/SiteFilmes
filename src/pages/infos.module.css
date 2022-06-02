@@ -142,7 +142,8 @@ color: yellow;
         display: flex;
         justify-content: center;
         height: 250px;
-       overflow:scroll;
+        overflow-y:scroll;
+        
        
     }
     .paragrafo p{
