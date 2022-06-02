@@ -9,7 +9,7 @@ function Sobre() {
       <WebNav />
       <MobileNav />
 
-      <section className={`${styles.sobre} animeLeft`}>
+      <section className={styles.sobre} >
         <h1>Sobre</h1>
         <div className={styles.barra}></div>
         <div className={styles.contP}>

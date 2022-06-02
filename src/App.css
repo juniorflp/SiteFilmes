@@ -22,6 +22,17 @@ body {
   min-height: calc(100vh + 10rem);
 }
 
+.logo{
+  animation: spinner 20s linear infinite;
+}
+
+@keyframes spinner {
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
 /*---------------------------------nav bar----------------------------------------------------*/
 
 .containerNav {
@@ -122,9 +133,9 @@ body {
 }
 
 .animeLeft {
-  transform: translateX(-50px);
+  transform: translatey(90px);
   opacity: 0;
-  animation: animeLeft 0.5s forwards;
+  animation: animeLeft 0.7s forwards;
 }
 @keyframes animeLeft {
   to {

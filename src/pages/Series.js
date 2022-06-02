@@ -4,15 +4,19 @@ import CardSerie from "../card/CardSerie";
 import styles from "./lancamentos.module.css";
 import WebNav from "../nav/WebNav";
 import MobileNav from "../nav/MobileNav";
+import Load from "../load/Load";
 
 function Series() {
   const [series, setSeries] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+
 
   React.useEffect(() => {
     load();
   }, []);
 
   async function load() {
+    setLoading(true);
     try {
       const resposta = await axios.get(
         // `https://api.themoviedb.org/3/movie/popular?api_key=8379d811565746e8306cca85bd4887c2&language=pt-BR`
@@ -24,8 +28,13 @@ function Series() {
       console.log(resposta.data.results);
     } catch (error) {
       console.log("Error");
+    }finally{
+      setLoading(false);
     }
   }
+
+  if(series === null)return null;
+  if(loading)return  <div><Load/></div>;
 
   return (
     <>

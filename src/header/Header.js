@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./header.module.css";
-import logo from "../images/logo2.png"
+import logo from "../images/logo3.png"
 
 
 function Header() {
@@ -19,7 +19,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerItens}>
-        <Link to="/" end><img src={logo}alt="logo"/></Link>
+        <Link to="/" end><img className='logo' src={logo}alt="logo"/></Link>
         
         <form className={styles.form} onSubmit={buscar}>
           <input

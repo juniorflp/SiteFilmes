@@ -11,19 +11,33 @@
     margin: 0 auto;
     margin-bottom: 50px;
 }
+@keyframes slide{
+    0%{
+        transform: translatey(-200px) ;
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translatey(0px);
+        opacity:1;
+    }
+}
 .sobre h1{
     
     color: var(--destakColor);
     font-size:2.5rem;
     margin-bottom:20px;
+    animation: slide .8s ease-in;
 }
 .barra{
     width:2px;
     height:400px;
     background:linear-gradient(to bottom, rgb(155, 32, 255),#ff2525, #1500fc);
+    animation: slide .6s ease-in;
 }
 .contP{
     max-width: 400px;
+    animation: slide .4s ease-in;
 }
 .sobre p {
     color:rgba(255, 255, 255, 0.542);
@@ -35,7 +49,7 @@
 
 @media (max-width:865px) {
     .sobre{
-        margin-top: 20px;
+        margin-top: 50px;
         display: flex;
         flex-direction: column;
         width: 500px;
@@ -50,7 +64,7 @@
 }
 @media (max-width:500px) {
     .sobre{
-        margin-top: 20px;
+        margin-top: 100px;
         display: flex;
         flex-direction: column;
         width: 280px;
@@ -64,6 +78,7 @@
 
     }
     .sobre p{
+        font-size: 1.1rem;
         text-align: center;
         margin-top: 20px;
     }

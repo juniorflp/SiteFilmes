@@ -13,11 +13,6 @@
     justify-content: center;
     align-items: center;
     
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: end;
-    gap:4rem;
-    align-items: center;  */
     
 }
 .containerInfo .bg{
@@ -30,12 +25,42 @@
     opacity: .2;
     z-index:-1;
     box-shadow: inset 300px -100px 80px 80px rgb(0, 0, 0);
+    animation: zoom 20s;
+}
+@keyframes zoom{
+    0% {
+        transform: scale(1.3);
+    }100%{
+        transform: scale(1);
+    }
+}
+.fotoDados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes slide{
+    0%{
+        transform: translatey(-200px) ;
+        opacity: 0;
+    }100%{
+        transform: translatey(0px);
+        opacity:1;
+    }
 }
  
 .poster{
     border-radius:15px; 
     margin-left:5rem;
-
+    animation: slide .5s ease-in;
+}
+.dados{
+    text-align: left;
+    border-left: 2px solid rgba(255, 255, 255, 0.306);
+    padding-left: 70px;
+    margin-left: 4rem;
+    animation: slide .8s ease-in;
 }
 .botaoContainer{
     width:113px;
@@ -53,17 +78,11 @@
     display: flex;
     border: none;
     padding:5px 10px;
-    
     border-radius: 15px;
     cursor: pointer;
     
 }
-.dados{
-    text-align: left;
-    border-left: 2px solid rgba(255, 255, 255, 0.306);
-    padding-left: 70px;
-    margin-left: 4rem;
-}
+
 .dados p{
     width: 70%;
     font-size: 1.4rem;
@@ -72,6 +91,7 @@
 .dados h1{
     font-size: 2rem;
     margin-bottom: 20px;
+    
 }
 .score{
     font-size: 1.5rem;
@@ -85,4 +105,58 @@ color: yellow;
 .genero{
     font-weight: bold;
     margin-bottom: 20px;
+}
+@media (max-width: 999px){
+    .containerInfo .bg{
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0px -90px 80px 60px rgb(0, 0, 0);
+    }
+    .poster{
+        width: 300px;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+    .dados h1{
+        font-size: 1.4rem;
+    }
+    .dados{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0px;
+        margin-left: 0rem;
+        border-left:none;
+        overflow: hidden;
+    }
+    .fotoDados{
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .paragrafo {
+        display: flex;
+        justify-content: center;
+        height: 250px;
+       overflow:scroll;
+       
+    }
+    .paragrafo p{
+        font-size: 1.1rem;
+    }
+    .genero{
+        font-weight: 100;
+        
+    }
+}
+@media (max-width: 500px){
+    .fotoDados{
+        margin-top: 300px;
+    }
+    
+    
 }
