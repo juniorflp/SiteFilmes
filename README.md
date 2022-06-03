@@ -19,7 +19,7 @@
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/100806337/171944361-977cd841-4e0f-4217-8321-0fa9abeb3ecb.gif)
 
 ### Como rodar o projeto
-* intale o node na sua maquina https://nodejs.org/en/download/
+* instale o node na sua maquina https://nodejs.org/en/download/
 * instalo o VS CODE https://code.visualstudio.com/download
 * Clone o repositório para sua área de trabalho
 * abra o console do VS CODE 
