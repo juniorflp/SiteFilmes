@@ -9,6 +9,7 @@ import Load from "../load/Load";
 function InfoSeries() {
   const [filme, setFilme] = React.useState([]);
   const [generos, setGeneros] = React.useState([]);
+  const [temporadas, setTemporadas] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const foto = filme.backdrop_path;
   const stiles = {
@@ -35,7 +36,8 @@ function InfoSeries() {
       );
       setFilme(resposta.data);
       setGeneros(resposta.data.genres);
-      console.log(resposta.data);
+      setTemporadas(resposta.data.seasons);
+      console.log(resposta.data.seasons);
     } catch (error) {
       console.log("Error");
     } finally {
@@ -50,37 +52,54 @@ function InfoSeries() {
       </div>
     );
   return (
-    <section className={styles.containerInfo}>
-      {/* <img className={styles.bg} src={`${imgBaseUrl2}${filme.backdrop_path}`} alt="bg"/> */}
-      <div className={styles.bg} style={stiles}></div>
+    <>
+      <section className={styles.containerInfo}>
+        {/* <img className={styles.bg} src={`${imgBaseUrl2}${filme.backdrop_path}`} alt="bg"/> */}
+        <div className={styles.bg} style={stiles}></div>
 
-      <div className={styles.botaoContainer}>
-        <button className={styles.btnBack} onClick={() => navigate(-1)}>
-          <BiArrowBack /> voltar
-        </button>
-      </div>
-      <div className={styles.fotoDados}>
-        <img
-          className={styles.poster}
-          src={`${imgBaseUrl}${filme.poster_path}`}
-          alt="capa do filme"
-        />
+        <div className={styles.botaoContainer}>
+          <button className={styles.btnBack} onClick={() => navigate(-1)}>
+            <BiArrowBack /> voltar
+          </button>
+        </div>
+        <div className={styles.fotoDados}>
+          <img
+            className={styles.poster}
+            src={`${imgBaseUrl}${filme.poster_path}`}
+            alt="capa do filme"
+          />
 
-        <div className={styles.dados}>
-          <h1>{filme.title}</h1>
-          <div className={styles.score}>
-            <AiFillStar className={styles.star} />
-            {nota}
-          </div>
-          <p className={styles.genero}>
-            {generos.map((genero) => genero.name + " | ")}
-          </p>
-          <div className={styles.paragrafo}>
-            <p>{filme.overview}</p>
+          <div className={styles.dados}>
+            <h1>{filme.title}</h1>
+            <div className={styles.score}>
+              <AiFillStar className={styles.star} />
+              {nota}
+            </div>
+            <p className={styles.genero}>
+              {generos.map((genero) => genero.name + " | ")}
+            </p>
+            <div className={styles.paragrafo}>
+              <p>{filme.overview}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section>
+        {temporadas.map((temporada) => (
+          <div key={temporada.id} className={styles.temporadasContainer}>
+            <img
+              src={"https://image.tmdb.org/t/p/w200" + temporada.poster_path}
+            />
+            <div className={styles.temporadasInfos}>
+              <h1>{temporada.name}</h1>
+              <p>{temporada.episode_count} episódios</p>
+              <spam>{temporada.overview}</spam>
+            </div>
+          </div>
+        ))}
+      </section>
+    </>
   );
 }
 

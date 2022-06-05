@@ -108,6 +108,54 @@ color: yellow;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
+/*---------------------------------------- parte das temporadas--------------------------------------*/
+.temporadasContainer{
+    position: relative;
+    background-color: black;    
+    display: flex;
+    margin: 40px;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius:10px;
+}
+.temporadasContainer::before{
+    background:linear-gradient(to bottom left, #ff2525,rgb(155, 32, 255), #1500fc);
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius:10px;
+}
+.temporadasContainer img{
+    border-radius: 10px;
+}
+.temporadasInfos{
+    width: 600px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 40px;
+}
+.temporadasInfos h1{
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+    color: #cb0000;
+}
+.temporadasInfos p{
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+.temporadasInfos spam{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.636);
+}
+/*---------------------------------------- parte das temporadas--------------------------------------*/
+
 @media (max-width: 999px){
     .containerInfo .bg{
         background-size: cover;
@@ -158,6 +206,46 @@ color: yellow;
         font-weight: 100;
         
     }
+
+    .temporadasContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        margin: 30px;
+        padding: 10px;
+    }
+    .temporadasContainer img{
+        border-radius: 10px;
+        width: 250px;
+    }
+    .temporadasInfos{
+        
+        width: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .temporadasInfos h1{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        color: #cb0000;
+    }
+    .temporadasInfos p{
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+    }
+    .temporadasInfos spam{
+        margin-bottom: 20px;
+        font-size: 1.0rem;
+        color: rgba(255, 255, 255, 0.636);
+    }
+
 }
 @media (max-width: 500px){
     .containerInfo{
