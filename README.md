@@ -23,7 +23,7 @@
 * instalo o VS CODE https://code.visualstudio.com/download
 * Clone o repositório para sua área de trabalho
 * abra o console do VS CODE 
-* npm start
+* npm start >
 
 ### Tecnologias usadas
 * HTML/ CSS/ JAVA SCRIPT
